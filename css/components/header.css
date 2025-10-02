@@ -1,0 +1,51 @@
+header .conteiner {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.headerLogo {
+    margin-left: 20px;
+    max-width: 150px;
+    height: auto;
+}
+
+.conteiner nav {
+    display: flex;
+    gap: 30px;
+    font-size: 22px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.conteiner nav p a {
+    color: #1351d8;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.conteiner nav p a:hover {
+    border-bottom: #1351d8 solid 2px;
+    background-color: rgba(19, 81, 216, 0.1);
+}
+@media screen and (max-width: 500px) {
+
+    header .conteiner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    header .conteiner nav {
+        gap: 10px;
+        font-size: 18px;
+    }
+    .headerLogo{
+        margin-left: auto;
+    }
+}
