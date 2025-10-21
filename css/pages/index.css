@@ -56,17 +56,17 @@ main div p a:hover {
     align-items: center;
 }
 
-.slide img, .slide_first img {
+.slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;   
 }
 
-/* .slide.ativo , .slide_first.ativo {
+.slide.ativo {
     opacity: 1;
     transform: scale(1);
     z-index: 2;
-} */
+}
 
 .manual-navigation {
     position: absolute;
@@ -90,7 +90,7 @@ main div p a:hover {
 @media (max-width: 500px) {
     /* main{
         align-items: center;
-    } */
+    }
     main div p {
         font-size: 14px;
         padding: 0 15px;
@@ -98,5 +98,5 @@ main div p a:hover {
 
     .imagem {
         padding: 10px;
-    }
+    } */
 }
