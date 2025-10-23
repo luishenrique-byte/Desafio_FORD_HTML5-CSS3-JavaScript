@@ -7,7 +7,7 @@ let vetorImg = [img1, img2, img3];
 const label1 = document.querySelector('label[for="radio1"]');
 const label2 = document.querySelector('label[for="radio2"]');
 const label3 = document.querySelector('label[for="radio3"]');
-let vetorLabels = [label1, label2, label3];
+let vetorLabel = [label1, label2, label3];
 
 const radio1 = document.getElementById('radio1');
 const radio2 = document.getElementById('radio2');
@@ -28,7 +28,7 @@ let intervalo;
 document.addEventListener('DOMContentLoaded', () => {
     if (vetorImg[0]) {
         vetorImg[0].classList.add('ativo');
-        vetorLabels[0].classList.add('ativo');
+        vetorLabel[0].classList.add('ativo');
         vetorInfo[0].classList.add('ativo');
     }
 });
@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', startInteval);
 
 
 function trocarSlide(radio) {
+
+    clearInterval(intervalo);
+
     let input = radio;
 
     //Remove 'ativo' de todas img
@@ -47,7 +50,7 @@ function trocarSlide(radio) {
     });
 
     // Remove 'ativo' de todos os labels
-    vetorLabels.forEach(label => {
+    vetorLabel.forEach(label => {
         label.classList.remove('ativo');
     });
 
@@ -56,25 +59,30 @@ function trocarSlide(radio) {
     })
 
     // Adiciona a classe 'ativo' ao slide correspondente ao botão clicado
-    if (input.id === 'radio1') {
-
-        img1.classList.add('ativo');// <-- Adicionado
-        label1.classList.add('ativo'); // <-- Adicionado
-        info1.classList.add('ativo');
-
-    } else if (input.id === 'radio2') {
-
-        img2.classList.add('ativo');// <-- Adicionado
-        label2.classList.add('ativo'); // <-- Adicionado
-        info2.classList.add('ativo');
-
-    } else if (input.id === 'radio3') {
-
-        img3.classList.add('ativo');// <-- Adicionado
-        label3.classList.add('ativo'); // <-- Adicionado
-        info3.classList.add('ativo');
-
+    switch (input.id) {
+        case 'radio1':
+            img1.classList.add('ativo');// <-- Adicionado
+            label1.classList.add('ativo'); // <-- Adicionado
+            info1.classList.add('ativo');
+            slideAtual = 0;    
+            break;
+        
+        case 'radio2':
+            img2.classList.add('ativo');// <-- Adicionado
+            label2.classList.add('ativo'); // <-- Adicionado
+            info2.classList.add('ativo');
+            slideAtual = 1;    
+            break;
+            
+        case 'radio3':
+            img3.classList.add('ativo');// <-- Adicionado
+            label3.classList.add('ativo'); // <-- Adicionado
+            info3.classList.add('ativo');
+            slideAtual = 2;
+            break;
     }  
+
+    startInteval();
 }
 
 
@@ -87,7 +95,7 @@ function trocarAuto(){
     trocarSlide(proximoSlide);
 
     // +1 no contador para próxima Img
-    slideAtual++;
+    slideAtual ++;
     
     // Garante que volte para a primeira Img
     if(slideAtual>=vetorImg.length){
@@ -96,10 +104,8 @@ function trocarAuto(){
 }
 
 function startInteval(){
-    intervalo = setInterval(trocarAuto,2500);
+    intervalo = setInterval(trocarAuto,2000);
 }
-
-
 
 /*TENTATIVA DE PASSAR O MOUSE E PARAR O INTERVALO*/
 /*document.querySelector('.manual-buttom').addEventListener('mouseover', () =>{
