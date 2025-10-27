@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css"  href="css/components/header.css">
-    <link rel="stylesheet" type="text/css"  href="css/components/footer.css">
-    <link rel="stylesheet" type="text/css"  href="css/pages/lancamento.css">
+    <link rel="stylesheet" type="text/css" href="css/components/header.css">
+    <link rel="stylesheet" type="text/css" href="css/components/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/lancamento.css">
     <link rel="shortcut icon" href="img/ford_logo.ico" type="image/x-icon">
     <title>Ford Company</title>
 </head>
+
 <body>
     <header>
         <div class="conteiner">
@@ -25,7 +27,10 @@
 
     <main>
         <div class="video_apresentacao">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/vQsryuNmsL0?si=Puzls9vfAytBqHNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vQsryuNmsL0?si=Puzls9vfAytBqHNQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div>
             <table class="tabela">
@@ -49,42 +54,154 @@
                 <tr id="linha2">
                     <td>
                         <div class="conteiner-info-carro">
-                            <input type="checkbox" name="" class="checkbox">
+                            <input type="checkbox" name="" class="checkbox" onchange="inserirCarroVetor(this, new Carro('img/XL Cabine.jpg', 'XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', 183850))">
                             <div class="info">
                                 <p class="nome">XL Cabine Simples 2.2 Diesel 4X4 MT 2022</p>
                                 <p>Preço Sugerido: R$ 183.850</p>
                             </div>
-                            <img src="img/info.png" alt="info.png">
+                            <img class="info_button" src="img/info.png" alt="info.png" onclick="inserirCarroVetor(this, new Carro('img/XL Cabine.jpg', 'XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', 183850)); mostrarTabela(this)">
                         </div>
                     </td>
                     <td>
                         <div class="conteiner-info-carro">
-                            <input type="checkbox" name="" class="checkbox">
+                            <input type="checkbox" name="" class="checkbox" onchange="inserirCarroVetor(this, new Carro('img/xls 2.2 diesel.jpg','XLS 2.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16',220690))">
                             <div class="info">
                                 <p class="nome">XLS 2.2 Diesel 4X4 AT 2022</p>
                                 <p>Preço Sugerido: R$ 220.690</p>
                             </div>
-                            <img src="img/info.png" alt="info.png">
+                            <img class="info_button" src="img/info.png" alt="info.png" onclick="inserirCarroVetor(this, new Carro('img/xls 2.2 diesel.jpg','XLS 2.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16',220690)); mostrarTabela(this)">
                         </div>
                     </td>
                     <td>
                         <div class="conteiner-info-carro">
-                            <input type="checkbox" name="" class="checkbox">
+                            <input type="checkbox" name="" class="checkbox" onchange="inserirCarroVetor(this, new Carro('img/storm.jpg','Storm 3.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', 222790))">
                             <div class="info">
                                 <p class="nome">Storm 3.2 Diesel 4X4 AT 2022</p>
                                 <p>Preço Sugerido: R$ 222.790</p>
                             </div>
-                            <img src="img/info.png" alt="info.png">
+                            <img class="info_button" src="img/info.png" alt="info.png" onclick="inserirCarroVetor(this, new Carro('img/storm.jpg','Storm 3.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', 222790)); mostrarTabela(this)">
                         </div>
                     </td>
                 </tr>
             </table>
         </div>
         <div class="button-container">
-            <button id="comparar-button" type="submit">COMPARAR</button>
+            <button class="comparar-button" id="comparar-button" type="submit" onclick="mostrarTabela(this)">COMPARAR</button>
         </div>
     </main>
-
+    <div id="comparacao">
+        <div id="div_buttomClose" class="buttonClose_comparacao" onclick="ocultarTabela(this)"><img src="img/close.svg" alt="Botão para fechar"></div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td id="compare_image_0"></td>
+                    <td id="compare_image_1"></td>
+                </tr>
+                <tr>
+                    <td>Modelo</td>
+                    <td id="compare_modelo_0"></td>
+                    <td id="compare_modelo_1"></td>
+                </tr>
+                <tr>
+                    <td>Altura da ca&ccedil;amba (mm)</td>
+                    <td id="compare_alturaCacamba_0"></td>
+                    <td id="compare_alturaCacamba_1"></td>
+                </tr>
+                <tr>
+                    <td>Altura do ve&iacute;culo (mm)</td>
+                    <td id="compare_alturaVeiculo_0"></td>
+                    <td id="compare_alturaVeiculo_1"></td>
+                </tr>
+                <tr>
+                    <td>Altura livre do solo (mm)</td>
+                    <td id="compare_alturaSolo_0"></td>
+                    <td id="compare_alturaSolo_1"></td>
+                </tr>
+                <tr>
+                    <td>Capacidade de carga (Kg)</td>
+                    <td id="compare_capacidadeCarga_0"></td>
+                    <td id="compare_capacidadeCarga_1"></td>
+                </tr>
+                <tr>
+                    <td>Motor</td>
+                    <td id="compare_motor_0"></td>
+                    <td id="compare_motor_1"></td>
+                </tr>
+                <tr>
+                    <td>Pot&ecirc;ncia (cv)</td>
+                    <td id="compare_potencia_0"></td>
+                    <td id="compare_potencia_1"></td>
+                </tr>
+                <tr>
+                    <td>Volume de ca&ccedil;amba (L)</td>
+                    <td id="compare_volumeCacamba_0"></td>
+                    <td id="compare_volumeCacamba_1"></td>
+                </tr>
+                <tr>
+                    <td>Roda</td>
+                    <td id="compare_roda_0"></td>
+                    <td id="compare_roda_1"></td>
+                </tr>
+                <tr>
+                    <td>Pre&ccedil;o</td>
+                    <td id="compare_preco_0"></td>
+                    <td id="compare_preco_1"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="informacao">
+        <div id="div_buttomClose" class="buttonClose_info" onclick="ocultarTabela(this)"><img src="img/close.svg" alt="Botão para fechar"></div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td id="compare_image"></td>
+                </tr>
+                <tr>
+                    <td>Modelo</td>
+                    <td id="compare_modelo"></td>
+                </tr>
+                <tr>
+                    <td>Altura da ca&ccedil;amba (mm)</td>
+                    <td id="compare_alturaCacamba"></td>
+                </tr>
+                <tr>
+                    <td>Altura do ve&iacute;culo (mm)</td>
+                    <td id="compare_alturaVeiculo"></td>
+                </tr>
+                <tr>
+                    <td>Altura livre do solo (mm)</td>
+                    <td id="compare_alturaSolo"></td>
+                </tr>
+                <tr>
+                    <td>Capacidade de carga (Kg)</td>
+                    <td id="compare_capacidadeCarga"></td>
+                </tr>
+                <tr>
+                    <td>Motor</td>
+                    <td id="compare_motor"></td>
+                </tr>
+                <tr>
+                    <td>Pot&ecirc;ncia (cv)</td>
+                    <td id="compare_potencia"></td>
+                </tr>
+                <tr>
+                    <td>Volume de ca&ccedil;amba (L)</td>
+                    <td id="compare_volumeCacamba"></td>
+                </tr>
+                <tr>
+                    <td>Roda</td>
+                    <td id="compare_roda"></td>
+                </tr>
+                <tr>
+                    <td>Pre&ccedil;o</td>
+                    <td id="compare_preco"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <footer>
         <div class="conteiner">
             <div class="socialMedia">
@@ -100,10 +217,14 @@
                 </a>
             </div>
             <div class="footerLogo">
-                <p><a href="https://www.ford.com.br/copyright/" target="_blank">Copyright © 2025 Ford Motor Company - Todos os direitos reservados</a></p>
+                <p><a href="https://www.ford.com.br/copyright/" target="_blank">Copyright © 2025 Ford Motor Company -
+                        Todos os direitos reservados</a></p>
                 <img src="img/ford-96.png" alt="Small Logo Ford">
             </div>
         </div>
     </footer>
 </body>
+<script src="js/lancamento.js">
+    Carro
+</script>
 </html>
