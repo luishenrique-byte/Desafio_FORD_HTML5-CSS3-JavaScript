@@ -56,7 +56,7 @@
 }
 
 .forms textarea {
-    resize: vertical;
+    resize: none;
     height: 120px;
     min-height: 80px;
 }
@@ -74,6 +74,17 @@
 
 .forms button:hover {
     background-color: #1b357e;
+}
+form p {
+    text-align: justify;
+    font-size: 16px;
+}
+
+.lgpd_1, .lgpd_2{
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    gap: 5px;
 }
 
 /* RESPONSIVIDADE - CONTATO */

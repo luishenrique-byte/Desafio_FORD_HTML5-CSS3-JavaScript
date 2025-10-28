@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css"  href="css/style.css">
-    <link rel="stylesheet" type="text/css"  href="css/components/header.css">
-    <link rel="stylesheet" type="text/css"  href="css/components/footer.css">
-    <link rel="stylesheet" type="text/css"  href="css/pages/contato.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/components/header.css">
+    <link rel="stylesheet" type="text/css" href="css/components/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/contato.css">
     <link rel="shortcut icon" href="img/ford_logo.ico" type="image/x-icon">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div class="conteiner">
@@ -23,29 +25,41 @@
         </div>
     </header>
 
-    <main> 
+    <main>
         <div class="conteiner_pag3">
 
-                <img class="car-image" src="img/xls 2.2 diesel.jpg" alt="XLS_DIESEL_2022">
+            <img class="car-image" src="img/xls 2.2 diesel.jpg" alt="XLS_DIESEL_2022">
 
-                <form action="#" class="forms">
-                    <label for="">Nome:</label>
-                    <input type="text" placeholder="Nome Completo" class="input_escreve">
-                    <label for="">E-mail:</label>
-                    <input type="email" name="" id="" placeholder="E-mail para contato" class="input_escreve">
-                    <label for="">Telefone/Celular:</label>
-                    <input type="tel" name="" id="" placeholder="Telefone/Celular para contato">
-                    <label for="">Tipo de Contato:</label>
-                    <select name="Tipo de contato" id="seletor" aria-placeholder="Selecione alguma das opções">
-                        <option value="">Elogio</option>
-                        <option value="">Reclamação</option>
-                        <option value="">Solicitação</option>
-                    </select>
-                    <textarea name="mensagem" id="" placeholder="Escreva sua mensagem aqui." class="input_escreve"></textarea>
-                    <button id="botaoEnviar" type="submit">Enviar</button>
-                </form>
+            <form action="#" class="forms" onsubmit="return Post(this)">
+                <label for="">Nome:</label>
+                <input type="text" name="nome" placeholder="Nome Completo" class="input_escreve" id="nomeid">
+                <label for="">E-mail:</label>
+                <input type="email" name="email" id="" placeholder="E-mail para contato" class="input_escreve">
+                <label for="">Telefone/Celular:</label>
+                <input type="tel" name="telefone" id="" placeholder="Telefone/Celular para contato">
+                <label for="">Tipo de Contato:</label>
+                <select name="contato" id="seletor" aria-placeholder="Selecione alguma das opções">
+                    <option value="">Elogio</option>
+                    <option value="">Reclamação</option>
+                    <option value="">Solicitação</option>
+                </select>
+                <textarea name="mensagem" id="" placeholder="Escreva sua mensagem aqui."
+                    class="input_escreve"></textarea>
+                <p>Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A qualquer
+                    momento, será possível editar ou remover tais dados <a
+                        href="https://www.ford.com.br/politica-de-privacidade/">Termos e Condições</a>.</p>
+                <div class="lgpd_1">
+                    <input type="checkbox" name="" id="lgpd_input">
+                    <p>Sim. Li e concordo com os Termos e Condições.</p>
+                </div>
+                <div class="lgpd_2">
+                    <input type="checkbox" name="" id="">
+                    <p>Sim. Também quero receber descontos e novidades.</p>
+                </div>
+                <button id="botaoEnviar" type="submit">Enviar</button>
+            </form>
         </div>
-     </main>  
+    </main>
 
     <footer>
         <div class="conteiner">
@@ -62,10 +76,12 @@
                 </a>
             </div>
             <div class="footerLogo">
-                <p><a href="https://www.ford.com.br/copyright/" target="_blank">Copyright © 2025 Ford Motor Company - Todos os direitos reservados</a></p>
+                <p><a href="https://www.ford.com.br/copyright/" target="_blank">Copyright © 2025 Ford Motor Company -
+                        Todos os direitos reservados</a></p>
                 <img src="img/ford-96.png" alt="Small Logo Ford">
             </div>
         </div>
     </footer>
+    <script src="js/contato.js"></script>
 </body>
 </html>
