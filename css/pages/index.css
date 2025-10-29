@@ -50,7 +50,10 @@ main div {
 
 .slides {
     position: relative;
-    height: 628px;
+    width: 100%;
+    height: 0;
+    /* Calcula a altura baseada na largura (628 / 1400 = 0.448) */
+    padding-top: 44.85%; /* 44.85% da largura */
 }
 
 .slides input{
@@ -72,7 +75,11 @@ main div {
 }
 
 .slide img {
-    width: auto; 
+    position: absolute; /* Adiciona Posição Absoluta */
+    top: 0;
+    left: 0;
+    width: 100%;  /* <-- AGORA PODE USAR 100% */
+    height: 100%;
     object-fit: cover;   
 }
 
@@ -107,16 +114,24 @@ main div {
 }
 
 /* RESPONSIVIDADE - INDEX */
-@media (max-width: 500px) {
-    /* main{
-        align-items: center;
+@media screen and (max-width: 805px) {
+
+    /* Ajusta os botões de navegação */
+    .manual-navigation {
+        bottom: 15px; /* Sobe um pouco os botões */
+        gap: 15px; /* Diminui o espaço entre eles */
     }
-    main div p {
-        font-size: 14px;
-        padding: 0 15px;
+    .manual-buttom{
+        padding: 8px; /* Diminui o tamanho do botão */
     }
 
-    .imagem {
-        padding: 10px;
-    } */
+    /* Ajusta o texto informativo */
+    .info-ranger p {
+        font-size: 16px; /* Diminui a fonte do texto */
+        margin-top: 10px;
+    }
+    
+    #info {
+        margin-bottom: 5px;
+    }
 }

@@ -33,19 +33,21 @@ header .conteiner {
     border-bottom: #1351d8 solid 2px;
     background-color: rgba(19, 81, 216, 0.1);
 }
-@media screen and (max-width: 500px) {
-
+@media screen and (max-width: 805px) {
     header .conteiner{
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        padding: 10px; /* Reduz o padding lateral */
     }
     header .conteiner nav {
-        gap: 10px;
-        font-size: 18px;
+        gap: 15px; /* Diminui o gap entre os links */
+        font-size: 20px; /* Diminui um pouco a fonte */
+        justify-content: center; /* Garante a centralização */
     }
     .headerLogo{
-        margin-left: auto;
+        margin: 0 auto 10px auto; /* Centraliza o logo e dá uma margem inferior */
+        max-width: 130px; /* Pode diminuir o logo um pouco */
     }
 }

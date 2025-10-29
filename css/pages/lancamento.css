@@ -147,7 +147,7 @@ th, td {
 }
 
 td:nth-child(1) {
-    font-weight: 700;
+    /* font-weight: 700; */
     width: 40%;
 }
 
@@ -157,49 +157,25 @@ td:nth-child(1) {
 
 
 /* RESPONSIVIDADE - LANÇAMENTO */
-/* @media (max-width: 500px) {
+/* @media (max-width: 1130px) {
     .video_apresentacao {
-        height: 250px;
-        padding: 10px;
+        height: 300px; 
+        padding: 10px 0; 
     }
 
     .tabela {
         display: block;
-        overflow-x: auto;
+        overflow-x: auto; 
+        white-space: nowrap; 
     }
 
     .tabela tr {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 15px;
-        margin-bottom: 20px;
+        display: inline-block; 
     }
-
+    
     .tabela td {
-        flex: 0 0 280px;
-        min-width: 280px;
+      display: block; 
+      min-width: 280px; 
+      padding: 10px;
     }
-
-    #linha2 td .conteiner-info-carro {
-        min-width: auto;
-        max-width: 280px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #linha2 td .info {
-        text-align: center;
-    }
-
-    .tabela .nome {
-        font-size: 18px;
-    }
-
-    #comparar-button {
-        font-size: 24px;
-        padding: 12px 28px;
-        width: 280px;
-    }
-} */
+}   */
