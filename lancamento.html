@@ -33,64 +33,56 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div>
-            <table class="tabela">
-                <tr id="linha1">
-                    <td>
-                        <div class="conteiner-img-carro">
-                            <img src="img/XL Cabine.jpg" alt="Carro XL cabine">
+            <div class="carros-container">
+                <div class="carro-card">
+                    <div class="conteiner-img-carro">
+                        <img src="img/XL Cabine.jpg" alt="Carro XL cabine">
+                    </div>
+                    <div class="conteiner-info-carro">
+                        <input type="checkbox" name="" class="checkbox" onchange="inserirCarroVetor(this, new Carro('img/XL Cabine.jpg', 'XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', 183850))">
+                        <div class="info">
+                            <p class="nome">XL Cabine Simples 2.2 Diesel 4X4 MT 2022</p>
+                            <p>Preço Sugerido: R$ 183.850</p>
                         </div>
-                    </td>
-                    <td>
-                        <div class="conteiner-img-carro">
-                            <img src="img/xls 2.2 diesel.jpg" alt="Carro XLS">
+                        <img class="info_button" src="img/info.png" alt="info.png" onclick="inserirCarroVetor(this, new Carro('img/XL Cabine.jpg', 'XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', 183850)); mostrarTabela(this)">
+                    </div>
+                </div>
+                <div class="carro-card">
+                    <div class="conteiner-img-carro">
+                        <img src="img/xls 2.2 diesel.jpg" alt="Carro XLS">
+                    </div>
+                    <div class="conteiner-info-carro">
+                        <input type="checkbox" name="" class="checkbox" onchange="inserirCarroVetor(this, new Carro('img/xls 2.2 diesel.jpg','XLS 2.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16',220690))">
+                        <div class="info">
+                            <p class="nome">XLS 2.2 Diesel 4X4 AT 2022</p>
+                            <p>Preço Sugerido: R$ 220.690</p>
                         </div>
-                    </td>
-                    <td>
-                        <div class="conteiner-img-carro">
-                            <img src="img/storm.jpg" alt="Carro Storm">
+                        <img class="info_button" src="img/info.png" alt="info.png" onclick="inserirCarroVetor(this, new Carro('img/xls 2.2 diesel.jpg','XLS 2.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16',220690)); mostrarTabela(this)">
+                    </div>
+                </div>
+
+                <div class="carro-card">
+                    <div class="conteiner-img-carro">
+                        <img src="img/storm.jpg" alt="Carro Storm">
+                    </div>
+                    <div class="conteiner-info-carro">
+                        <input type="checkbox" name="" class="checkbox" onchange="inserirCarroVetor(this, new Carro('img/storm.jpg','Storm 3.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', 222790))">
+                        <div class="info">
+                            <p class="nome">Storm 3.2 Diesel 4X4 AT 2022</p>
+                            <p>Preço Sugerido: R$ 222.790</p>
                         </div>
-                    </td>
-                </tr>
-                <tr id="linha2">
-                    <td>
-                        <div class="conteiner-info-carro">
-                            <input type="checkbox" name="" class="checkbox" onchange="inserirCarroVetor(this, new Carro('img/XL Cabine.jpg', 'XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', 183850))">
-                            <div class="info">
-                                <p class="nome">XL Cabine Simples 2.2 Diesel 4X4 MT 2022</p>
-                                <p>Preço Sugerido: R$ 183.850</p>
-                            </div>
-                            <img class="info_button" src="img/info.png" alt="info.png" onclick="inserirCarroVetor(this, new Carro('img/XL Cabine.jpg', 'XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', 183850)); mostrarTabela(this)">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="conteiner-info-carro">
-                            <input type="checkbox" name="" class="checkbox" onchange="inserirCarroVetor(this, new Carro('img/xls 2.2 diesel.jpg','XLS 2.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16',220690))">
-                            <div class="info">
-                                <p class="nome">XLS 2.2 Diesel 4X4 AT 2022</p>
-                                <p>Preço Sugerido: R$ 220.690</p>
-                            </div>
-                            <img class="info_button" src="img/info.png" alt="info.png" onclick="inserirCarroVetor(this, new Carro('img/xls 2.2 diesel.jpg','XLS 2.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16',220690)); mostrarTabela(this)">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="conteiner-info-carro">
-                            <input type="checkbox" name="" class="checkbox" onchange="inserirCarroVetor(this, new Carro('img/storm.jpg','Storm 3.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', 222790))">
-                            <div class="info">
-                                <p class="nome">Storm 3.2 Diesel 4X4 AT 2022</p>
-                                <p>Preço Sugerido: R$ 222.790</p>
-                            </div>
-                            <img class="info_button" src="img/info.png" alt="info.png" onclick="inserirCarroVetor(this, new Carro('img/storm.jpg','Storm 3.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', 222790)); mostrarTabela(this)">
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                        <img class="info_button" src="img/info.png" alt="info.png" onclick="inserirCarroVetor(this, new Carro('img/storm.jpg','Storm 3.2 Diesel 4X4 AT 2022', 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', 222790)); mostrarTabela(this)">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="button-container">
             <button class="comparar-button" id="comparar-button" type="submit" onclick="mostrarTabela(this)">COMPARAR</button>
         </div>
     </main>
     <div id="comparacao">
-        <div id="div_buttomClose" class="buttonClose_comparacao" onclick="ocultarTabela(this)"><img src="img/close.svg" alt="Botão para fechar"></div>
+        <div id="div_buttomClose" class="buttonClose_comparacao" onclick="ocultarTabela(this)"><img src="img/close.svg"
+                alt="Botão para fechar"></div>
         <table>
             <tbody>
                 <tr>
@@ -152,7 +144,8 @@
         </table>
     </div>
     <div id="informacao">
-        <div id="div_buttomClose" class="buttonClose_info" onclick="ocultarTabela(this)"><img src="img/close.svg" alt="Botão para fechar"></div>
+        <div id="div_buttomClose" class="buttonClose_info" onclick="ocultarTabela(this)"><img src="img/close.svg"
+                alt="Botão para fechar"></div>
         <table>
             <tbody>
                 <tr>
@@ -227,4 +220,5 @@
 <script src="js/lancamento.js">
     Carro
 </script>
+
 </html>
