@@ -51,3 +51,9 @@ header .conteiner {
         max-width: 130px; /* Pode diminuir o logo um pouco */
     }
 }
+@media screen and (max-width:331px){
+    header .conteiner nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
