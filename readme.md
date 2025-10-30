@@ -1,40 +1,41 @@
-# 🚗 Desafio Sprint 4 - Ford Enter
+# 🚗 Desafio – HTML5, CSS3 & JavaScript
+
 
 ## 📖 Sobre o Projeto
 
-Este repositório contém o projeto desenvolvido para o **Desafio da Sprint 4** do programa **Ford Enter**.
-O objetivo foi aplicar **HTML5** e **CSS3** na criação de um site estático e responsivo, estruturando páginas, componentes e estilos de forma organizada.
+Este repositório reúne o trabalho desenvolvido para o programa **Ford Enter** (Sprint 4). 
+O objetivo foi construir um site estático, com múltiplas páginas, utilizando **HTML5**, **CSS3** e **JavaScript**, 
+mantendo design responsivo para dispositivos móveis.
 
 ## 🖼️ Funcionalidades
 
-* Estruturação de páginas com **HTML5**
-* Estilização com **CSS3**
-* Organização modular dos estilos em **components** (cabeçalho e rodapé) e **pages** (CSS específico para cada página)
-* Responsividade implementada com **media queries** para telas de até **500px de largura**
+* Estruturação semântica com HTML5
+* Estilização modular com CSS3 (incluindo organização em componentes e páginas)
+* Comportamentos adicionais com JavaScript
+* Design responsivo: o layout adapta-se para telas menores
 
 ## 📂 Estrutura do Repositório
 
 ```
-Desafio_Sprint4_Luis_Henrique_FordEnter/
-│
+📁 Estrutura do Repositório
+/
 ├── css/
 │   ├── components/
-│   │   ├── footer.css
-│   │   └── header.css
+│   │   ├── header.css
+│   │   └── footer.css
 │   ├── pages/
-│   │   ├── contato.css
 │   │   ├── index.css
-│   │   └── lancamento.css
+│   │   ├── lancamento.css
+│   │   └── contato.css
 │   └── style.css
-│
 ├── img/                  # Imagens utilizadas no site
-├── pdf/                  # Documento com instruções do desafio
+├── js/                   # Scripts JavaScript
+├── pdf/                  # Documento do desafio original
 │   └── Desafio_04 HTML E CSS.pdf
-│
-├── contato.html          # Página de contato
 ├── index.html            # Página inicial
 ├── lancamento.html       # Página de lançamento
-└── readme.md             # Este arquivo
+├── contato.html          # Página de contato
+└── README.md             # (este arquivo)
 ```
 
 ## 🚀 Como Executar
@@ -42,7 +43,7 @@ Desafio_Sprint4_Luis_Henrique_FordEnter/
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/luishenrique-byte/Desafio_Sprint_4.git
+   git clone https://github.com/luishenrique-byte/Desafio_FORD_HTML5-CSS3-JavaScript.git
    ```
 2. Acesse a pasta do projeto:
 
@@ -53,21 +54,30 @@ Desafio_Sprint4_Luis_Henrique_FordEnter/
 
 ## 📱 Responsividade
 
-* O site se adapta para telas menores utilizando **@media screen and (max-width: 500px)**.
+* O site foi desenvolvido para funcionar bem em diversos dispositivos e tamanhos de tela.
+Exemplo de abordagem utilizada:
+```
+@media screen and (max-width: 800px) {
+  /* ajustes para telas pequenas */
+}
+```
+
 * Essa abordagem garante melhor experiência de navegação em dispositivos móveis.
 
 ## 🛠️ Tecnologias Utilizadas
 
 * **HTML5**
 * **CSS3**
+* **JavaScript**
 
 ## 📌 Aprendizados
 
-Este desafio permitiu praticar:
+Este desafio permitiu aplicar e consolidar conhecimentos em:
 
 * Estruturação de sites com HTML semântico
-* Estilização modular com CSS
-* Conceitos de responsividade e design adaptativo
+* Organização de estilos com CSS modular (componentes e páginas)
+* Desenvolvimento de design adaptativo/responsivo
+* Incremento de funcionalidades com JavaScript (quando aplicável)
 
 ## 👨‍💻 Autor
 
