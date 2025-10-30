@@ -43,7 +43,7 @@ mantendo design responsivo para dispositivos móveis.
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/luishenrique-byte/Desafio_FORD_HTML5-CSS3-JavaScript.git
+   git clone https://github.com/luishenrique-byte/Desafio_FORD_Front-END.git
    ```
 2. Acesse a pasta do projeto:
 
